@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gregory Stevenson | Pacific Ridgeway — Retirement Income & Legacy Planning</title>
+<meta name="description" content="Gregory Stevenson, Founder & CEO of Pacific Ridgeway and author of Indexed Annuity Secrets. Helping families create retirement income, preserve wealth, and build lasting legacies.">
+<meta name="author" content="Gregory Stevenson">
+<meta name="theme-color" content="#16273f">
+<link rel="canonical" href="https://gregorystevensonfinancial.com/">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gregory Stevenson | Pacific Ridgeway">
+<meta property="og:description" content="Helping families create retirement income, preserve wealth, and build lasting legacies.">
+<meta property="og:url" content="https://gregorystevensonfinancial.com/">
+<meta property="og:image" content="https://gregorystevensonfinancial.com/headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+
+<!-- SEO: structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Gregory Stevenson",
+  "jobTitle": "Founder & CEO",
+  "worksFor": { "@type": "Organization", "name": "Pacific Ridgeway" },
+  "description": "Retirement income, wealth preservation, and legacy planning specialist. U.S. Navy veteran and author of Indexed Annuity Secrets.",
+  "url": "https://gregorystevensonfinancial.com/",
+  "knowsAbout": ["Retirement Income Planning","Annuities","Life Insurance","Legacy Planning","Tax-Efficient Strategies","Asset Protection"],
+  "author": { "@type": "Book", "name": "Indexed Annuity Secrets" }
+}
+</script>
+
+<style>
+  :root{
+    --navy:#16273f;
+    --navy-2:#1f3a5f;
+    --navy-deep:#0f1c30;
+    --gold:#c2a14d;
+    --gold-soft:#d9c285;
+    --ink:#14181e;
+    --sub:#5c6675;
+    --bg:#ffffff;
+    --cream:#f8f5ee;
+    --mist:#eef1f5;
+    --line:#e9e9e7;
+    --radius:24px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-font-smoothing:antialiased;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);font-size:17px;line-height:1.62;letter-spacing:-0.01em;}
+  h1,h2,h3{letter-spacing:-0.035em;line-height:1.08;font-weight:800;}
+  a{color:inherit;text-decoration:none;}
+  em.serif{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;letter-spacing:0;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 30px;}
+  .label{font-size:12.5px;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+  .gs-badge{display:block;}
+  /* real logo image (falls back to drawn badge if file missing) */
+  .logo-wrap{display:inline-block;position:relative;line-height:0;}
+  .logo-img{width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;}
+
+  /* reveal animation */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:80;background:rgba(255,255,255,0.7);backdrop-filter:saturate(180%) blur(22px);-webkit-backdrop-filter:saturate(180%) blur(22px);border-bottom:1px solid rgba(0,0,0,0.06);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .nav-brand{display:flex;align-items:center;gap:11px;}
+  .nav-brand .gs-badge,.nav-brand .logo-wrap{width:40px;height:40px;}
+  .nav-brand .bt{font-weight:700;font-size:16px;letter-spacing:-0.02em;}
+  .nav-brand .bt span{color:var(--sub);font-weight:500;}
+  .nav-links{display:flex;gap:30px;align-items:center;}
+  .nav-links a{color:#3d434d;font-size:14.5px;font-weight:500;transition:color .15s;}
+  .nav-links a:hover{color:var(--ink);}
+  .nav-links a.nav-cta{background:var(--navy);color:#fff;padding:10px 20px;border-radius:980px;font-weight:600;font-size:14px;}
+  .nav-links a.nav-cta:hover{background:var(--navy-deep);}
+  .menu-toggle{display:none;background:none;border:none;color:var(--ink);font-size:24px;cursor:pointer;}
+
+  /* BUTTONS */
+  .btn{display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-family:inherit;
+       padding:16px 32px;border-radius:980px;font-weight:600;font-size:16px;letter-spacing:-0.01em;
+       transition:transform .15s ease,background .2s ease,box-shadow .2s ease,border-color .2s ease;}
+  .btn-gold{background:var(--gold);color:#1a1407;box-shadow:0 10px 30px rgba(194,161,77,.34);}
+  .btn-gold:hover{background:var(--gold-soft);transform:translateY(-2px);}
+  .btn-navy{background:var(--navy);color:#fff;}
+  .btn-navy:hover{background:var(--navy-deep);transform:translateY(-2px);}
+  .btn-light{background:rgba(255,255,255,.9);color:var(--navy);border:1px solid rgba(22,39,63,.18);}
+  .btn-light:hover{border-color:var(--navy);transform:translateY(-2px);}
+  .btn-outline{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.5);}
+  .btn-outline:hover{background:rgba(255,255,255,.1);border-color:#fff;}
+
+  /* gold star divider ornament */
+  .gold-divider{display:flex;align-items:center;justify-content:center;gap:14px;margin:22px 0 0;}
+  .gold-divider.left{justify-content:flex-start;}
+  .gold-divider .ln{height:1.5px;width:54px;background:linear-gradient(90deg,transparent,var(--gold));}
+  .gold-divider .ln.r{background:linear-gradient(90deg,var(--gold),transparent);}
+  .gold-divider .st{color:var(--gold);font-size:11px;letter-spacing:6px;}
+  .script{font-family:'Dancing Script',cursive;font-weight:700;}
+
+  /* HERO */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#dbe6f0 0%,#eaeef0 32%,#f6efe2 60%,#f7e9cf 100%);padding:84px 0 0;}
+  .hero::before{content:"";position:absolute;inset:14px;border:1px solid rgba(194,161,77,0.55);border-radius:22px;pointer-events:none;z-index:6;}
+  .hero-glow{position:absolute;left:50%;bottom:120px;transform:translateX(-50%);width:760px;height:340px;background:radial-gradient(ellipse at center,rgba(255,233,188,0.85) 0%,rgba(255,233,188,0) 70%);z-index:1;pointer-events:none;}
+  .hero-grid{position:relative;z-index:5;display:grid;grid-template-columns:1.18fr 0.82fr;gap:56px;align-items:center;padding-bottom:260px;}
+  .hero h1{font-size:66px;color:var(--navy);margin-bottom:24px;}
+  .hero h1 .accent{font-family:'Playfair Display',serif;font-style:italic;font-weight:600;letter-spacing:0;}
+  .hero p.lead{font-size:21px;line-height:1.5;color:#3c4756;margin-bottom:36px;max-width:520px;font-weight:400;}
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .photo-frame{position:relative;justify-self:center;width:350px;height:444px;border-radius:30px;overflow:hidden;
+       box-shadow:0 36px 80px rgba(15,28,48,.32);background:#dfe6ee;}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block;}
+  .photo-fallback{display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;color:#7e889a;text-align:center;padding:28px;font-size:13px;line-height:1.6;background:#e7ecf2;}
+  .photo-fallback .gs-badge{width:128px;height:128px;margin-bottom:18px;}
+  /* mountain scene */
+  .mtns{position:absolute;left:0;right:0;bottom:0;width:100%;height:230px;display:block;z-index:3;}
+  .mtns-hero{height:360px;}
+  @media(max-width:880px){.mtns{height:150px;}.mtns-hero{height:210px;}}
+
+  /* TRUST STRIP */
+  .strip{background:var(--navy);color:#cdd8e6;}
+  .strip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:16px 46px;padding:24px 30px;}
+  .strip .item{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:600;letter-spacing:.2px;}
+  .strip .item svg{width:18px;height:18px;flex:0 0 18px;color:var(--gold-soft);}
+
+  /* SECTIONS */
+  section.block{padding:108px 0;}
+  section.cream{background:var(--cream);}
+  section.mist{background:var(--mist);}
+  .section-head{max-width:720px;margin:0 auto 18px;text-align:center;}
+  .section-head.left{margin-left:0;text-align:left;}
+  h2{font-size:46px;color:var(--ink);margin-bottom:18px;}
+  .section-head p{font-size:19px;color:var(--sub);}
+  p.body{font-size:18px;color:var(--sub);margin-bottom:18px;line-height:1.68;}
+
+  /* PILLARS */
+  .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;margin-top:60px;}
+  .pillar{text-align:center;}
+  .pillar .pic{width:64px;height:64px;border-radius:18px;background:#fff;box-shadow:0 12px 30px rgba(22,39,63,.1);display:flex;align-items:center;justify-content:center;margin:0 auto 20px;}
+  .pillar .pic svg{width:30px;height:30px;color:var(--navy);}
+  .pillar h3{font-size:20px;margin-bottom:8px;letter-spacing:-0.02em;}
+  .pillar p{font-size:15.5px;color:var(--sub);}
+
+  /* BOOK */
+  .book{background:var(--navy);color:#fff;overflow:hidden;position:relative;}
+  .book .wrap{padding:112px 30px;}
+  .book-grid{display:grid;grid-template-columns:330px 1fr;gap:66px;align-items:center;}
+  .book h2{color:#fff;}
+  .book .label{color:var(--gold-soft);}
+  .book p{color:#c6d0df;font-size:18px;line-height:1.68;margin-bottom:18px;}
+  .book .sub-title{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-soft);font-size:23px;margin:4px 0 22px;font-weight:600;}
+  .book-cover{width:330px;border-radius:14px;overflow:hidden;box-shadow:0 38px 90px rgba(0,0,0,.55);background:#0d1830;justify-self:center;}
+  .book-cover img{width:100%;display:block;}
+  .book-cover .bc-fallback{aspect-ratio:1199/1850;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:34px;background:linear-gradient(180deg,#0a1326 0%,#16294f 70%,#c2a14d 100%);}
+  .book-cover .bc-fallback .t{font-family:'Playfair Display',serif;color:#fff;font-size:33px;letter-spacing:2px;line-height:1.18;text-transform:uppercase;font-style:normal;}
+  .book-cover .bc-fallback .s{font-size:11px;margin-top:16px;letter-spacing:1px;color:#dbe6f5;}
+  .stars{color:var(--gold-soft);letter-spacing:3px;font-size:18px;margin-bottom:6px;}
+  .review-note{font-size:13px;color:#9fb0c6;font-style:italic;}
+  .book-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
+
+  /* SERVICES */
+  .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:60px;}
+  .svc{background:#fff;border-radius:var(--radius);padding:38px 34px;box-shadow:0 2px 4px rgba(0,0,0,.03),0 14px 38px rgba(22,39,63,.06);transition:transform .2s ease,box-shadow .2s ease;}
+  .svc:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(0,0,0,.05),0 24px 56px rgba(22,39,63,.13);}
+  .svc .ic{width:56px;height:56px;border-radius:16px;background:linear-gradient(160deg,var(--navy),var(--navy-2));display:flex;align-items:center;justify-content:center;margin-bottom:22px;}
+  .svc .ic svg{width:26px;height:26px;color:var(--gold-soft);}
+  .svc h3{font-size:21px;margin-bottom:9px;letter-spacing:-0.02em;}
+  .svc p{font-size:15.5px;color:var(--sub);}
+
+  /* DIFFERENCE */
+  .diff-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:58px;}
+  .diff{display:flex;gap:20px;align-items:flex-start;background:#fff;border-radius:20px;padding:30px 32px;box-shadow:0 12px 34px rgba(22,39,63,.06);}
+  .diff .n{flex:0 0 44px;width:44px;height:44px;border-radius:12px;background:var(--cream);color:var(--navy);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;}
+  .diff h3{font-size:19px;margin-bottom:6px;letter-spacing:-0.02em;}
+  .diff p{font-size:15.5px;color:var(--sub);}
+
+  /* TESTIMONIALS */
+  .tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:58px;}
+  .tst{background:#fff;border-radius:20px;padding:34px 32px;box-shadow:0 12px 34px rgba(22,39,63,.06);border:1px dashed #d8dce2;}
+  .tst .q{font-size:18px;line-height:1.6;color:#2b3340;margin-bottom:22px;font-family:'Playfair Display',serif;font-style:italic;}
+  .tst .who{display:flex;align-items:center;gap:13px;}
+  .tst .av{width:44px;height:44px;border-radius:50%;background:var(--mist);display:flex;align-items:center;justify-content:center;color:var(--navy);font-weight:700;}
+  .tst .who .nm{font-weight:600;font-size:15px;}
+  .tst .who .rl{font-size:13px;color:var(--sub);}
+  .ph-note{text-align:center;margin-top:26px;font-size:13.5px;color:var(--sub);font-style:italic;}
+
+  /* ABOUT */
+  .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
+  .about-photo{border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(15,28,48,.2);background:#e7ecf2;aspect-ratio:4/5;}
+  .about-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+  .about-photo .pf{display:flex;align-items:center;justify-content:center;height:100%;flex-direction:column;color:#7e889a;text-align:center;padding:26px;font-size:13px;}
+  .about-photo .pf .gs-badge{width:120px;height:120px;margin-bottom:16px;}
+  .values{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+  .values span{background:var(--cream);border:1px solid var(--line);border-radius:980px;padding:9px 18px;font-size:14px;font-weight:600;color:var(--navy);}
+
+  /* MEDIA */
+  .media-row{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:54px;}
+  .media-row .m{height:96px;border-radius:16px;background:#fff;border:1px dashed #d8dce2;display:flex;align-items:center;justify-content:center;color:#9aa3b0;font-size:13.5px;font-weight:600;text-align:center;padding:0 16px;}
+
+  /* CTA */
+  .cta{position:relative;overflow:hidden;background:var(--navy);color:#fff;text-align:center;padding:130px 0;}
+  .cta h2{color:#fff;font-size:50px;max-width:780px;margin:0 auto 18px;}
+  .cta p{color:#c6d0df;max-width:560px;margin:0 auto 36px;font-size:20px;}
+  .cta .mtns{height:160px;opacity:.5;}
+
+  /* FOOTER */
+  footer{background:#fff;border-top:1px solid var(--line);color:var(--sub);font-size:14px;}
+  footer .wrap{padding:54px 30px 46px;}
+  footer .f-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:26px;align-items:center;padding-bottom:30px;margin-bottom:26px;border-bottom:1px solid var(--line);}
+  footer .f-brand{display:flex;align-items:center;gap:13px;}
+  footer .f-brand .gs-badge,footer .f-brand .logo-wrap{width:46px;height:46px;}
+  footer .f-brand .ft{color:var(--ink);font-weight:700;font-size:16px;letter-spacing:-0.02em;}
+  footer .f-brand .fs{font-size:13px;color:var(--sub);}
+  footer .f-nav{display:flex;gap:24px;flex-wrap:wrap;}
+  footer .f-nav a{font-size:14px;font-weight:500;color:#3d434d;}
+  footer .f-nav a:hover{color:var(--ink);}
+  footer .disclaimer{font-size:12.5px;line-height:1.66;color:#969ca7;}
+
+  @media(max-width:880px){
+    .hero{padding:48px 0 0;}
+    .hero-grid{grid-template-columns:1fr;gap:42px;text-align:center;padding-bottom:120px;}
+    .hero h1{font-size:42px;}
+    .hero p.lead{margin-left:auto;margin-right:auto;}
+    .hero-actions{justify-content:center;}
+    .photo-frame{order:-1;width:280px;height:354px;}
+    h2{font-size:31px;}
+    .cta h2{font-size:32px;}
+    .pillars{grid-template-columns:1fr 1fr;gap:34px 20px;}
+    .book-grid{grid-template-columns:1fr;gap:44px;text-align:center;}
+    .book-cover{margin:0 auto;}
+    .svc-grid{grid-template-columns:1fr;}
+    .diff-grid{grid-template-columns:1fr;}
+    .tst-grid{grid-template-columns:1fr;}
+    .about-grid{grid-template-columns:1fr;gap:34px;}
+    .media-row{grid-template-columns:1fr 1fr;}
+    .nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(22px);flex-direction:column;padding:22px 30px;gap:22px;border-bottom:1px solid var(--line);}
+    .nav-links.open{display:flex;}
+    .menu-toggle{display:block;}
+  }
+</style>
+</head>
+<body>
+
+<!-- GS monogram badge -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="gsLogo" viewBox="0 0 200 200">
+    <defs>
+      <path id="arcTop" d="M 32,100 A 68,68 0 0 1 168,100"/>
+      <path id="arcBot" d="M 38,108 A 62,62 0 0 0 162,108"/>
+    </defs>
+    <circle cx="100" cy="100" r="97" fill="#f8f5ee" stroke="#16273f" stroke-width="4"/>
+    <circle cx="100" cy="100" r="86" fill="none" stroke="#16273f" stroke-width="1.5"/>
+    <text font-family="'Inter',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="2.3" fill="#16273f">
+      <textPath href="#arcTop" startOffset="50%" text-anchor="middle">GREGORY STEVENSON</textPath>
+    </text>
+    <text font-family="'Inter',Arial,sans-serif" font-size="13" font-weight="600" letter-spacing="2.6" fill="#16273f">
+      <textPath href="#arcBot" startOffset="50%" text-anchor="middle">PACIFIC RIDGEWAY</textPath>
+    </text>
+    <text x="78" y="130" font-family="'Playfair Display',serif" font-style="italic" font-weight="600" font-size="98" fill="#c2a14d" text-anchor="middle">G</text>
+    <text x="120" y="130" font-family="'Playfair Display',serif" font-style="italic" font-weight="600" font-size="98" fill="#16273f" text-anchor="middle">S</text>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <div class="nav-brand">
+      <span class="logo-wrap">
+        <img class="logo-img" src="logo.png" alt="Gregory Stevenson, Pacific Ridgeway logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <svg class="gs-badge" viewBox="0 0 200 200" style="display:none" aria-hidden="true"><use href="#gsLogo"/></svg>
+      </span>
+      <span class="bt">Gregory Stevenson <span>· Pacific Ridgeway</span></span>
+    </div>
+    <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
+    <nav class="nav-links" id="navlinks" aria-label="Primary">
+      <a href="#why">Why Gregory</a>
+      <a href="#book">The Book</a>
+      <a href="#services">Services</a>
+      <a href="#difference">The Difference</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule a Consultation</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="label">Pacific Ridgeway</div>
+      <h1>Helping families retire with <span class="accent">confidence.</span></h1>
+      <div class="gold-divider left" aria-hidden="true"><span class="ln"></span><span class="st">&#9733; &#9733; &#9733;</span><span class="ln r"></span></div>
+      <p class="lead">Retirement income planning, wealth preservation, and legacy strategies — built around what matters most to you and the people you love.</p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule a Consultation</a>
+        <a class="btn btn-light" href="#book">Get the Book</a>
+      </div>
+    </div>
+    <div class="photo-frame">
+      <!-- Add a file named headshot.jpg in the same folder to show your photo. -->
+      <img src="headshot.jpg" alt="Gregory Stevenson, Founder & CEO of Pacific Ridgeway"
+           onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex';">
+      <div class="photo-fallback" id="photoFallback" style="display:none;">
+        <svg class="gs-badge" viewBox="0 0 200 200" aria-hidden="true"><use href="#gsLogo"/></svg>
+        <div>Add a file named<br><strong>headshot.jpg</strong><br>here to show your photo</div>
+      </div>
+    </div>
+  </div>
+  <!-- Layered mountain valley scene -->
+  <svg class="mtns mtns-hero" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="gFar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6d2e0"/><stop offset="1" stop-color="#aebfd2"/></linearGradient>
+      <linearGradient id="gMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#84a0bd"/><stop offset="1" stop-color="#5f7993"/></linearGradient>
+      <linearGradient id="gNear" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f5c7e"/><stop offset="1" stop-color="#2a4160"/></linearGradient>
+    </defs>
+    <!-- far range -->
+    <path d="M0,320 L0,168 L150,118 L280,162 L410,108 L560,166 L700,112 L860,168 L1010,114 L1160,165 L1300,120 L1440,160 L1440,320Z" fill="url(#gFar)"/>
+    <!-- mid range with tall peaks -->
+    <path d="M0,320 L0,212 L140,152 L250,108 L360,186 L500,142 L620,78 L760,176 L900,128 L1040,196 L1180,140 L1320,202 L1440,166 L1440,320Z" fill="url(#gMid)"/>
+    <!-- snow caps -->
+    <g fill="#eef4fb">
+      <path d="M224,146 L250,108 L276,146 L262,139 L250,132 L238,139 Z"/>
+      <path d="M588,122 L620,78 L652,122 L635,113 L620,105 L605,113 Z"/>
+      <path d="M876,158 L900,128 L924,160 L912,153 L900,147 L888,153 Z"/>
+    </g>
+    <!-- near range -->
+    <path d="M0,320 L0,252 L180,208 L340,250 L500,212 L680,256 L840,216 L1020,256 L1200,212 L1380,250 L1440,236 L1440,320Z" fill="url(#gNear)"/>
+    <!-- foreground hill -->
+    <path d="M0,320 L0,290 L300,300 L640,286 L980,300 L1280,288 L1440,298 L1440,320Z" fill="#16273f"/>
+    <!-- pines -->
+    <g fill="#15322a">
+      <path d="M40,320 L70,212 L100,320Z"/>
+      <path d="M78,320 L118,168 L158,320Z"/>
+      <path d="M137,320 L165,216 L193,320Z"/>
+      <path d="M1250,320 L1290,184 L1330,320Z"/>
+      <path d="M1318,320 L1350,214 L1382,320Z"/>
+      <path d="M1217,320 L1245,224 L1273,320Z"/>
+      <path d="M1368,320 L1400,200 L1432,320Z"/>
+    </g>
+  </svg>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 19l-4.8 2.5.9-5.4L4.2 8.3l5.4-.8z"/></svg> U.S. Navy Veteran</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19V6a2 2 0 012-2h9l5 5v10a2 2 0 01-2 2H6a2 2 0 01-2-2z"/></svg> Author, Indexed Annuity Secrets</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/><circle cx="12" cy="11" r="2.5"/></svg> Founder &amp; CEO, Pacific Ridgeway</div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h18"/></svg> Education-First Approach</div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="block" id="why">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">Why Families Work With Gregory</div>
+      <h2>A steady hand for life's biggest decisions</h2>
+      <p>Your retirement isn't a transaction. It's the result of a lifetime of work — and it deserves a guide who treats it that way.</p>
+    </div>
+    <div class="pillars reveal">
+      <div class="pillar">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div>
+        <h3>Experience</h3>
+        <p>Years guiding families through the decisions that shape a secure retirement.</p>
+      </div>
+      <div class="pillar">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M3 8l9-4 9 4-9 4z"/><path d="M7 10v5c0 1.5 5 3 5 3s5-1.5 5-3v-5"/></svg></div>
+        <h3>Education</h3>
+        <p>Clear, jargon-free guidance so you fully understand every choice you make.</p>
+      </div>
+      <div class="pillar">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3.5 8-7 10-3.5-2-7-5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Integrity</h3>
+        <p>Honest advice that puts your goals first — even when that means telling you no.</p>
+      </div>
+      <div class="pillar">
+        <div class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+        <h3>Personalized Planning</h3>
+        <p>Strategies built around your family, your timeline, and your definition of enough.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section class="book" id="book">
+  <div class="wrap book-grid reveal">
+    <div class="book-cover">
+      <!-- Add a file named book-cover.jpg in the same folder to show your real cover. -->
+      <img src="book-cover.jpg" alt="Indexed Annuity Secrets, a book by Gregory Stevenson"
+           onerror="this.style.display='none';document.getElementById('bookFallback').style.display='flex';">
+      <div class="bc-fallback" id="bookFallback" style="display:none;">
+        <div class="t">Indexed<br>Annuity<br>Secrets</div>
+        <div class="s">How the Affluent Escape the 401(k) Trap to Grow Their Wealth</div>
+        <div class="s" style="margin-top:22px;letter-spacing:2px;">GREGORY STEVENSON</div>
+      </div>
+    </div>
+    <div>
+      <div class="label">The Book</div>
+      <h2>Indexed Annuity Secrets</h2>
+      <div class="sub-title">How the Affluent Escape the 401(k) Trap to Grow Their Wealth</div>
+      <p>Most people are taught a single path to retirement — one that leaves their savings fully exposed to the market. In his book, Gregory explains in plain English how indexed annuities can help protect your principal from downturns while giving your money room to grow.</p>
+      <!-- REVIEWS PLACEHOLDER — replace with real, verifiable reviews when ready -->
+      <div class="stars" aria-hidden="true">★ ★ ★ ★ ★</div>
+      <p class="review-note">[ Add your real reader reviews and any media features here once approved. ]</p>
+      <div class="book-actions">
+        <a class="btn btn-gold" href="https://www.amazon.com/Indexed-Annuity-Secrets-Affluent-Exponentially/dp/1962595234" target="_blank" rel="noopener">Buy on Amazon</a>
+        <a class="btn btn-outline" href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Talk With Me</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="block cream" id="services">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">Services</div>
+      <h2>Built to protect what you've earned</h2>
+      <p>A complete, coordinated approach to retirement — so every piece works together toward your goals.</p>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 17l5-5 4 3 6-7"/><path d="M3 21h18"/></svg></div><h3>Retirement Income Planning</h3><p>Turn a lifetime of savings into dependable income you won't outlive.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3v18"/><path d="M7 7h7a3 3 0 010 6H7"/></svg></div><h3>Annuities</h3><p>Protect your principal while giving it the chance to grow safely.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-4.5-7-10a7 7 0 0114 0c0 5.5-7 10-7 10z"/></svg></div><h3>Life Insurance</h3><p>Protection that ensures the people you love are cared for, no matter what.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 10l9-6 9 6"/><path d="M5 9v10h14V9"/><path d="M9 19v-5h6v5"/></svg></div><h3>Legacy Planning</h3><p>Pass on more than money — pass on stability, intention, and care.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 9h4a2 2 0 010 4H9m2-6v10"/></svg></div><h3>Tax-Efficient Strategies</h3><p>Keep more of what you've built with thoughtful, compliant planning.</p></div>
+      <div class="svc"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/></svg></div><h3>Asset Protection</h3><p>Guard your nest egg against the risks that derail retirement.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFFERENCE -->
+<section class="block" id="difference">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">The Pacific Ridgeway Difference</div>
+      <h2>A modern firm, a personal touch</h2>
+      <p>The clarity and technology of a modern company, delivered with the attention of someone who treats you like family.</p>
+    </div>
+    <div class="diff-grid reveal">
+      <div class="diff"><div class="n">01</div><div><h3>Modern technology</h3><p>Streamlined, secure tools that make planning clear, simple, and easy to follow.</p></div></div>
+      <div class="diff"><div class="n">02</div><div><h3>Education first</h3><p>You'll never be rushed or pressured. We teach, you decide — on your timeline.</p></div></div>
+      <div class="diff"><div class="n">03</div><div><h3>A true client experience</h3><p>Responsive, white-glove service that continues long after the plan is in place.</p></div></div>
+      <div class="diff"><div class="n">04</div><div><h3>A coordinated service model</h3><p>Every strategy works together toward one goal: your confidence and security.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="block mist" id="results">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">Results &amp; Client Stories</div>
+      <h2>Trusted by the families he serves</h2>
+      <p>Real words from the people Gregory works with.</p>
+    </div>
+    <!-- TESTIMONIALS PLACEHOLDER — replace bracketed text with real, approved client testimonials -->
+    <div class="tst-grid reveal">
+      <div class="tst"><div class="q">"[ Add a real client testimonial here — what changed for them after working with you. ]"</div><div class="who"><div class="av">★</div><div><div class="nm">[ Client name ]</div><div class="rl">[ City / role ]</div></div></div></div>
+      <div class="tst"><div class="q">"[ Add a second client testimonial here — focus on trust and clarity. ]"</div><div class="who"><div class="av">★</div><div><div class="nm">[ Client name ]</div><div class="rl">[ City / role ]</div></div></div></div>
+      <div class="tst"><div class="q">"[ Add a third client testimonial here — the outcome and how it felt. ]"</div><div class="who"><div class="av">★</div><div><div class="nm">[ Client name ]</div><div class="rl">[ City / role ]</div></div></div></div>
+    </div>
+    <p class="ph-note">These are placeholders. Add only real, written-permission testimonials that follow your insurance compliance guidelines.</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="block" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <!-- Add a file named about.jpg (or reuse headshot.jpg) in the same folder. -->
+      <img src="about.jpg" alt="Gregory Stevenson"
+           onerror="this.onerror=null;this.src='headshot.jpg';this.classList.add('try2');"
+           onload="if(this.classList.contains('try2')&&this.naturalWidth===0){this.style.display='none';document.getElementById('aboutPf').style.display='flex';}">
+      <div class="pf" id="aboutPf" style="display:none;">
+        <svg class="gs-badge" viewBox="0 0 200 200" aria-hidden="true"><use href="#gsLogo"/></svg>
+        <div>Add <strong>about.jpg</strong> or<br><strong>headshot.jpg</strong> here</div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="label">About Gregory</div>
+      <h2>From service, to family, to your future</h2>
+      <p class="body">Gregory Stevenson is a U.S. Navy veteran, entrepreneur, and the founder of Pacific Ridgeway. After serving his country, he built his career on a simple belief: families deserve a guide who explains things clearly and puts their interests first.</p>
+      <p class="body">As the author of <em class="serif">Indexed Annuity Secrets</em> and a specialist in retirement income, he helps families create income they can count on, preserve the wealth they've worked for, and build a legacy that lasts. Above all, he's a husband and father who understands what's truly at stake.</p>
+      <div class="values">
+        <span>Navy Veteran</span><span>Author</span><span>Entrepreneur</span><span>Educator</span><span>Family Man</span><span>Builder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section class="block cream" id="media">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">Media &amp; Speaking</div>
+      <h2>Sharing what works, widely</h2>
+      <p>Podcasts, interviews, articles, and talks on retirement and protecting what matters.</p>
+    </div>
+    <!-- MEDIA PLACEHOLDER — replace with real logos/links to features and appearances -->
+    <div class="media-row reveal">
+      <div class="m">[ Podcast or feature ]</div>
+      <div class="m">[ Interview ]</div>
+      <div class="m">[ Article ]</div>
+      <div class="m">[ Speaking event ]</div>
+    </div>
+    <p class="ph-note">Swap these for real appearances and links as they come in.</p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="wrap" style="position:relative;z-index:5;">
+    <h2>Let's build your retirement with confidence.</h2>
+    <p>Book a free, no-pressure consultation. Bring your questions — Gregory will bring clear answers.</p>
+    <a class="btn btn-gold" href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule a Consultation</a>
+  </div>
+  <svg class="mtns" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,160 L0,110 L220,60 L440,110 L660,55 L900,110 L1120,60 L1440,110 L1440,160 Z" fill="#ffffff" opacity="0.06"/>
+    <path d="M0,160 L0,130 L240,90 L500,130 L760,85 L1040,130 L1280,95 L1440,130 L1440,160 Z" fill="#ffffff" opacity="0.09"/>
+  </svg>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-top">
+      <div class="f-brand">
+        <span class="logo-wrap">
+          <img class="logo-img" src="logo.png" alt="Gregory Stevenson, Pacific Ridgeway logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <svg class="gs-badge" viewBox="0 0 200 200" style="display:none" aria-hidden="true"><use href="#gsLogo"/></svg>
+        </span>
+        <div>
+          <div class="ft">Gregory Stevenson · Pacific Ridgeway</div>
+          <div class="fs">Retirement income · Wealth preservation · Legacy planning</div>
+        </div>
+      </div>
+      <nav class="f-nav" aria-label="Footer">
+        <a href="#why">Why Gregory</a>
+        <a href="#book">The Book</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule</a>
+      </nav>
+    </div>
+    <div class="disclaimer">
+      Gregory Stevenson is a licensed life &amp; annuity insurance professional. Pacific Ridgeway is a DBA of Horizon Inc.
+      This website and the book <em>Indexed Annuity Secrets</em> are for general informational and educational purposes only and are not financial, tax, or legal advice.
+      Nothing here is an offer to sell or a solicitation to buy any insurance product, and no specific results, returns, or outcomes are guaranteed or implied.
+      Annuity and insurance guarantees are subject to the claims-paying ability of the issuing insurance company. Product features, availability, and terms vary by state and by contract.
+      Please consult your own qualified advisors before making financial decisions.
+      <br><br>&copy; <span id="yr"></span> Horizon Inc. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  // subtle scroll reveal
+  (function(){
+    var els=document.querySelectorAll('.reveal');
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in');});return;}
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
+    },{threshold:0.12});
+    els.forEach(function(e){io.observe(e);});
+  })();
+</script>
+</body>
+</html>
