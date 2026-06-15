@@ -190,6 +190,25 @@
   .tst .who .rl{font-size:13px;color:var(--sub);}
   .ph-note{text-align:center;margin-top:26px;font-size:13.5px;color:var(--sub);font-style:italic;}
 
+  /* LINKS HUB */
+  .hub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:50px;}
+  .hub-card{display:flex;flex-direction:column;align-items:flex-start;gap:14px;background:#fff;border-radius:20px;padding:28px 26px;box-shadow:0 2px 4px rgba(0,0,0,.03),0 14px 36px rgba(22,39,63,.06);transition:transform .2s ease,box-shadow .2s ease;text-decoration:none;color:inherit;min-height:178px;}
+  .hub-card:hover{transform:translateY(-5px);box-shadow:0 6px 12px rgba(0,0,0,.05),0 24px 54px rgba(22,39,63,.13);}
+  .hub-card .ic{height:56px;display:flex;align-items:center;justify-content:flex-start;}
+  .hub-card .ic svg{height:50px;width:auto;display:block;}
+  .hub-card .ic img{height:54px;width:auto;max-width:100px;object-fit:contain;display:block;border-radius:8px;}
+  .hub-card h3{font-size:18px;margin-bottom:2px;letter-spacing:-0.02em;}
+  .hub-card .sub{font-size:13.5px;color:var(--sub);line-height:1.45;}
+  .hub-card .go{margin-top:auto;padding-top:8px;font-size:13px;font-weight:600;color:var(--navy);display:inline-flex;align-items:center;gap:5px;}
+  .hub-card:hover .go{color:var(--gold);}
+
+  /* footer social */
+  .f-social{display:flex;gap:12px;}
+  .f-social a{width:40px;height:40px;border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center;color:var(--navy);transition:background .2s,color .2s,transform .15s;}
+  .f-social a:hover{background:var(--navy);color:#fff;transform:translateY(-2px);}
+  .f-social a svg{width:19px;height:19px;}
+  .f-social a .ltr{font-weight:800;font-size:15px;}
+
   /* ABOUT */
   .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:center;}
   .about-photo{border-radius:26px;overflow:hidden;box-shadow:0 30px 70px rgba(15,28,48,.2);background:#e7ecf2;aspect-ratio:4/5;}
@@ -247,42 +266,21 @@
 </head>
 <body>
 
-<!-- GS monogram badge -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="gsLogo" viewBox="0 0 200 200">
-    <defs>
-      <path id="arcTop" d="M 32,100 A 68,68 0 0 1 168,100"/>
-      <path id="arcBot" d="M 38,108 A 62,62 0 0 0 162,108"/>
-    </defs>
-    <circle cx="100" cy="100" r="97" fill="#f8f5ee" stroke="#16273f" stroke-width="4"/>
-    <circle cx="100" cy="100" r="86" fill="none" stroke="#16273f" stroke-width="1.5"/>
-    <text font-family="'Inter',Arial,sans-serif" font-size="15" font-weight="600" letter-spacing="2.3" fill="#16273f">
-      <textPath href="#arcTop" startOffset="50%" text-anchor="middle">GREGORY STEVENSON</textPath>
-    </text>
-    <text font-family="'Inter',Arial,sans-serif" font-size="13" font-weight="600" letter-spacing="2.6" fill="#16273f">
-      <textPath href="#arcBot" startOffset="50%" text-anchor="middle">PACIFIC RIDGEWAY</textPath>
-    </text>
-    <text x="78" y="130" font-family="'Playfair Display',serif" font-style="italic" font-weight="600" font-size="98" fill="#c2a14d" text-anchor="middle">G</text>
-    <text x="120" y="130" font-family="'Playfair Display',serif" font-style="italic" font-weight="600" font-size="98" fill="#16273f" text-anchor="middle">S</text>
-  </symbol>
-</svg>
-
 <!-- NAV -->
 <header class="nav">
   <div class="wrap nav-inner">
     <div class="nav-brand">
       <span class="logo-wrap">
-        <img class="logo-img" src="logo.png" alt="Gregory Stevenson, Pacific Ridgeway logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-        <svg class="gs-badge" viewBox="0 0 200 200" style="display:none" aria-hidden="true"><use href="#gsLogo"/></svg>
+        <img class="logo-img" src="logo.png" alt="Gregory Stevenson logo">
       </span>
       <span class="bt">Gregory Stevenson <span>· Pacific Ridgeway</span></span>
     </div>
     <button class="menu-toggle" aria-label="Open menu" onclick="document.getElementById('navlinks').classList.toggle('open')">&#9776;</button>
     <nav class="nav-links" id="navlinks" aria-label="Primary">
+      <a href="#hub">Links</a>
       <a href="#why">Why Gregory</a>
       <a href="#book">The Book</a>
       <a href="#services">Services</a>
-      <a href="#difference">The Difference</a>
       <a href="#about">About</a>
       <a class="nav-cta" href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule a Consultation</a>
     </nav>
@@ -308,8 +306,7 @@
       <img src="headshot.jpg" alt="Gregory Stevenson, Founder & CEO of Pacific Ridgeway"
            onerror="this.style.display='none';document.getElementById('photoFallback').style.display='flex';">
       <div class="photo-fallback" id="photoFallback" style="display:none;">
-        <svg class="gs-badge" viewBox="0 0 200 200" aria-hidden="true"><use href="#gsLogo"/></svg>
-        <div>Add a file named<br><strong>headshot.jpg</strong><br>here to show your photo</div>
+        <div>headshot.jpg</div>
       </div>
     </div>
   </div>
@@ -357,8 +354,46 @@
   </div>
 </div>
 
+<!-- LINKS HUB -->
+<section class="block" id="hub">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div class="label">The Hub</div>
+      <h2>Everything in one place</h2>
+      <p>One tap to my channel, my profiles, my book, my company, and my training.</p>
+    </div>
+    <div class="hub-grid reveal">
+      <a class="hub-card" href="https://www.youtube.com/@IndexedAnnuitySecrets/videos" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 71 50" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M69.4 7.8c-.8-3-2.5-5.4-5.6-6.2C58.3 0 35.5 0 35.5 0S12.7 0 7.2 1.6C4.1 2.4 2.4 4.8 1.6 7.8 0 13.3 0 25 0 25s0 11.7 1.6 17.2c.8 3 2.5 5.4 5.6 6.2C12.7 50 35.5 50 35.5 50s22.8 0 28.3-1.6c3.1-.8 4.8-3.2 5.6-6.2C71 36.7 71 25 71 25s0-11.7-1.6-17.2z" fill="#FF0000"/><path d="M28.4 35.7L47.3 25 28.4 14.3z" fill="#fff"/></svg></span>
+        <div><h3>YouTube</h3><div class="sub">Watch my latest videos on retirement &amp; annuities.</div></div>
+        <span class="go">Watch &rarr;</span>
+      </a>
+      <a class="hub-card" href="https://www.linkedin.com/in/gregory-stevenson-financial-services" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#0A66C2" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.07 2.07 0 110-4.14 2.07 2.07 0 010 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.78C.8 0 0 .78 0 1.74v20.52C0 23.22.8 24 1.78 24h20.44c.98 0 1.78-.78 1.78-1.74V1.74C24 .78 23.2 0 22.22 0z"/></svg></span>
+        <div><h3>LinkedIn</h3><div class="sub">Connect with me professionally.</div></div>
+        <span class="go">Connect &rarr;</span>
+      </a>
+      <a class="hub-card" href="https://www.amazon.com/Indexed-Annuity-Secrets-Affluent-Exponentially/dp/1962595234" target="_blank" rel="noopener">
+        <span class="ic"><img src="book-cover.jpg" alt="Indexed Annuity Secrets book cover"></span>
+        <div><h3>My Book</h3><div class="sub"><em>Indexed Annuity Secrets</em> on Amazon.</div></div>
+        <span class="go">Buy on Amazon &rarr;</span>
+      </a>
+      <a class="hub-card" href="https://pacificridgeway.com/#contact" target="_blank" rel="noopener">
+        <span class="ic"><img src="pacific-ridgeway.png" alt="Pacific Ridgeway logo" onerror="this.style.display='none';"></span>
+        <div><h3>Pacific Ridgeway</h3><div class="sub">My company &mdash; get in touch.</div></div>
+        <span class="go">Visit &rarr;</span>
+      </a>
+      <a class="hub-card" href="https://ias-tools.pages.dev/thank-you" target="_blank" rel="noopener">
+        <span class="ic"><img src="logo.png" alt="Gregory Stevenson Financial Services logo"></span>
+        <div><h3>Annuity University</h3><div class="sub">My training &amp; the Annuity Readiness Blueprint.</div></div>
+        <span class="go">Start learning &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- WHY -->
-<section class="block" id="why">
+<section class="block soft" id="why">
   <div class="wrap">
     <div class="section-head reveal">
       <div class="label">Why Families Work With Gregory</div>
@@ -482,8 +517,7 @@
            onerror="this.onerror=null;this.src='headshot.jpg';this.classList.add('try2');"
            onload="if(this.classList.contains('try2')&&this.naturalWidth===0){this.style.display='none';document.getElementById('aboutPf').style.display='flex';}">
       <div class="pf" id="aboutPf" style="display:none;">
-        <svg class="gs-badge" viewBox="0 0 200 200" aria-hidden="true"><use href="#gsLogo"/></svg>
-        <div>Add <strong>about.jpg</strong> or<br><strong>headshot.jpg</strong> here</div>
+        <div>about.jpg</div>
       </div>
     </div>
     <div class="reveal">
@@ -536,22 +570,28 @@
     <div class="f-top">
       <div class="f-brand">
         <span class="logo-wrap">
-          <img class="logo-img" src="logo.png" alt="Gregory Stevenson, Pacific Ridgeway logo" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <svg class="gs-badge" viewBox="0 0 200 200" style="display:none" aria-hidden="true"><use href="#gsLogo"/></svg>
+          <img class="logo-img" src="logo.png" alt="Gregory Stevenson logo">
         </span>
         <div>
           <div class="ft">Gregory Stevenson · Pacific Ridgeway</div>
           <div class="fs">Retirement income · Wealth preservation · Legacy planning</div>
         </div>
       </div>
-      <nav class="f-nav" aria-label="Footer">
-        <a href="#why">Why Gregory</a>
-        <a href="#book">The Book</a>
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule</a>
-      </nav>
+      <div class="f-social" aria-label="Social links">
+        <a href="https://www.youtube.com/@IndexedAnnuitySecrets/videos" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="3.5"/><path d="M10.5 9.2l4.2 2.8-4.2 2.8z" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.linkedin.com/in/gregory-stevenson-financial-services" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="ltr">in</span></a>
+        <a href="https://www.amazon.com/Indexed-Annuity-Secrets-Affluent-Exponentially/dp/1962595234" target="_blank" rel="noopener" aria-label="Amazon book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5 4h11l3 3v13H5z"/><path d="M16 4v3h3"/></svg></a>
+        <a href="https://pacificridgeway.com/#contact" target="_blank" rel="noopener" aria-label="Pacific Ridgeway"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 19l6-9 4 5.5L16 11l5 8z"/><path d="M3 19h18"/></svg></a>
+      </div>
     </div>
+    <nav class="f-nav" aria-label="Footer" style="margin-bottom:22px;">
+      <a href="#hub">Links</a>
+      <a href="#why">Why Gregory</a>
+      <a href="#book">The Book</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="https://calendly.com/gregorystevenson/phone-call-with-agent" target="_blank" rel="noopener">Schedule</a>
+    </nav>
     <div class="disclaimer">
       Gregory Stevenson is a licensed life &amp; annuity insurance professional. Pacific Ridgeway is a DBA of Horizon Inc.
       This website and the book <em>Indexed Annuity Secrets</em> are for general informational and educational purposes only and are not financial, tax, or legal advice.
