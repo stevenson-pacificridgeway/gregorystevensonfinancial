@@ -4,7 +4,9 @@
    on failure so no lead is ever lost. Add new forms freely; they wire automatically. */
 (function(){
   var ENDPOINT = 'https://ridgecrm-production.up.railway.app/api/website-lead';
-  var SOURCE = 'Gregory Stevenson Financial';
+  function sourceFor(form){
+    return form.getAttribute("data-source") || window.__LEAD_SOURCE__ || (location.hostname + location.pathname);
+  }
 
   function val(form, names){
     for(var i=0;i<names.length;i++){
@@ -46,7 +48,7 @@
         name: name,
         email: val(form,['email']),
         phone: val(form,['phone','tel','mobile','phone_number']),
-        source: SOURCE,
+        source: sourceFor(form),
         message: val(form,['message','comments','notes','concern','primary_concern','question'])
       };
       var btn = form.querySelector('[type="submit"]') || form.querySelector('button');
