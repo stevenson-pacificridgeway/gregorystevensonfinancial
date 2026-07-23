@@ -3,20 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gregory Stevenson | Indexed Annuity Secrets — Grow Your Wealth Safely</title>
-<meta name="description" content="Gregory Stevenson — author of Indexed Annuity Secrets and founder of Pacific Ridgeway. Book a free retirement income review.">
+<title>Gregory Stevenson | Book Your Free Retirement Income Review</title>
+<meta name="description" content="Book a free 15-minute retirement income review with Gregory Stevenson — author of Indexed Annuity Secrets. No pressure, no obligation.">
 <meta name="theme-color" content="#14122e">
 <link rel="canonical" href="https://gregorystevensonfinancial.com/start/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Gregory Stevenson | Indexed Annuity Secrets">
-<meta property="og:description" content="Grow your wealth safely — without the market risk.">
+<meta property="og:title" content="Gregory Stevenson | Book Your Free Retirement Income Review">
+<meta property="og:description" content="Grow your wealth safely. Book a free 15-minute review.">
 <meta property="og:url" content="https://gregorystevensonfinancial.com/start/">
 <meta property="og:image" content="https://gregorystevensonfinancial.com/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://calendly.com">
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="preconnect" href="https://connect.facebook.net">
+<link rel="dns-prefetch" href="https://ridgecrm-production.up.railway.app">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 
 <script>
@@ -49,51 +53,61 @@
     font-size:17px;line-height:1.6;letter-spacing:-0.01em;min-height:100vh;}
   a{color:inherit;text-decoration:none;}
 
-  .wrap{width:100%;max-width:480px;margin:0 auto;padding:44px 22px 60px;
+  .wrap{width:100%;max-width:480px;margin:0 auto;padding:40px 22px 56px;
     display:flex;flex-direction:column;align-items:center;}
 
-  .logo{width:104px;height:104px;border-radius:50%;overflow:hidden;background:#e9e9ec;
-    box-shadow:0 0 0 2px rgba(230,207,140,.85), 0 18px 44px rgba(0,0,0,.5);}
+  .logo{width:96px;height:96px;border-radius:50%;overflow:hidden;background:#e9e9ec;
+    box-shadow:0 0 0 2px rgba(230,207,140,.85), 0 16px 40px rgba(0,0,0,.5);}
   .logo img{width:100%;height:100%;object-fit:cover;display:block;}
-  .eyebrow{margin-top:22px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);}
-  h1{margin-top:12px;font-family:'Playfair Display',serif;font-weight:600;font-size:40px;line-height:1.08;text-align:center;color:#fff;}
+  .eyebrow{margin-top:18px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);}
+  h1{margin-top:11px;font-family:'Playfair Display',serif;font-weight:600;font-size:36px;line-height:1.08;text-align:center;color:#fff;}
   h1 em{font-style:italic;color:var(--gold-bright);}
-  .tag{margin-top:14px;text-align:center;color:var(--sub);font-size:15.5px;max-width:400px;}
+  .tag{margin-top:12px;text-align:center;color:var(--sub);font-size:15px;max-width:400px;}
 
-  .btn-primary{width:100%;margin-top:28px;display:flex;align-items:center;justify-content:center;gap:10px;
-    padding:18px;border-radius:var(--radius);font-weight:700;font-size:17px;color:#241a06;
-    background:linear-gradient(135deg,#e6cd82,#c6a24c 55%,#a6832f);
-    box-shadow:0 14px 34px rgba(198,162,76,.4);transition:transform .15s ease;}
-  .btn-primary:hover{transform:translateY(-2px);}
+  .reassure{margin-top:14px;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 14px;color:#c9c4de;font-size:12.5px;font-weight:500;}
+  .reassure span{white-space:nowrap;}
+  .reassure b{color:var(--gold-soft);}
 
-  .links{width:100%;display:flex;flex-direction:column;gap:11px;margin-top:16px;}
-  .card{display:flex;align-items:center;gap:14px;padding:15px 17px;border-radius:var(--radius);
+  .booktitle{width:100%;margin-top:26px;text-align:center;}
+  .booktitle h2{font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#fff;}
+  .booktitle p{color:var(--sub);font-size:13.5px;margin-top:4px;}
+
+  .cal{width:100%;margin-top:14px;border-radius:var(--radius);overflow:hidden;position:relative;
+    border:1px solid rgba(230,207,140,.2);background:#1b1848;min-height:640px;}
+  #cal{width:100%;min-height:640px;}
+  @media(max-width:600px){.cal, #cal{min-height:760px;}}
+  .cal-skel{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;color:#9a95bd;}
+  .cal-skel .spin{width:26px;height:26px;border-radius:50%;border:2.5px solid rgba(230,207,140,.25);border-top-color:var(--gold-soft);animation:sp .8s linear infinite;}
+  @keyframes sp{to{transform:rotate(360deg);}}
+  .cal-skel span{font-size:13px;}
+
+  .divider{display:flex;align-items:center;gap:12px;width:100%;margin:32px 0 4px;color:#8983ab;}
+  .divider .l{flex:1;height:1px;background:rgba(230,207,140,.16);}
+  .divider small{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;}
+
+  .links{width:100%;display:flex;flex-direction:column;gap:10px;margin-top:14px;}
+  .card{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius);
     background:rgba(255,255,255,.045);border:1px solid rgba(230,207,140,.16);transition:.15s ease;}
   .card:hover{background:rgba(255,255,255,.08);border-color:rgba(230,207,140,.45);transform:translateY(-2px);}
-  .card .ic{flex:0 0 40px;width:40px;height:40px;border-radius:11px;background:linear-gradient(160deg,var(--indigo-2),var(--indigo));
+  .card .ic{flex:0 0 38px;width:38px;height:38px;border-radius:11px;background:linear-gradient(160deg,var(--indigo-2),var(--indigo));
     border:1px solid rgba(230,207,140,.28);display:flex;align-items:center;justify-content:center;}
-  .card .ic svg{width:20px;height:20px;color:var(--gold-soft);}
-  .card b{display:block;font-size:16px;font-weight:600;color:#fff;}
-  .card small{display:block;font-size:12.5px;color:var(--sub);}
+  .card .ic svg{width:19px;height:19px;color:var(--gold-soft);}
+  .card b{display:block;font-size:15.5px;font-weight:600;color:#fff;}
+  .card small{display:block;font-size:12px;color:var(--sub);}
   .card .arw{margin-left:auto;color:var(--gold-soft);opacity:.7;}
 
-  .sec{width:100%;margin-top:38px;text-align:center;}
-  .sec h2{font-family:'Playfair Display',serif;font-weight:600;font-size:24px;color:#fff;}
-  .sec p{color:var(--sub);font-size:14px;margin-top:5px;}
+  .sec{width:100%;margin-top:30px;text-align:center;}
+  .sec h2{font-family:'Playfair Display',serif;font-weight:600;font-size:22px;color:#fff;}
+  .sec p{color:var(--sub);font-size:13.5px;margin-top:5px;}
 
-  .cal{width:100%;margin-top:16px;border-radius:var(--radius);overflow:hidden;
-    border:1px solid rgba(230,207,140,.2);background:#1b1848;}
-  .calendly-inline-widget{min-width:300px;height:620px;}
-  @media(max-width:600px){.calendly-inline-widget{height:740px;}}
-
-  form{width:100%;margin-top:16px;display:flex;flex-direction:column;gap:11px;
+  form{width:100%;margin-top:14px;display:flex;flex-direction:column;gap:10px;
     background:rgba(255,255,255,.045);border:1px solid rgba(230,207,140,.2);border-radius:var(--radius);padding:20px;}
   form input, form textarea{background:#0f1c30;border:1px solid rgba(230,207,140,.25);border-radius:11px;
     padding:13px 15px;color:#f4f1e8;font-size:15px;font-family:inherit;width:100%;outline:none;}
   form button{border:none;cursor:pointer;border-radius:980px;padding:15px;font-family:inherit;font-weight:700;font-size:15.5px;
     color:#241a06;background:linear-gradient(135deg,#e6cd82,#c6a24c 55%,#a6832f);}
 
-  footer{width:100%;margin-top:34px;text-align:center;}
+  footer{width:100%;margin-top:32px;text-align:center;}
   .social{display:flex;justify-content:center;gap:12px;margin-bottom:16px;}
   .social a{width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;
     background:rgba(255,255,255,.05);border:1px solid rgba(230,207,140,.2);color:#cdc8e2;transition:.15s;}
@@ -101,7 +115,7 @@
   .social svg{width:16px;height:16px;}
   .disc{font-size:11px;line-height:1.55;color:#7d78a0;max-width:440px;margin:0 auto;}
 
-  @media(max-width:600px){ h1{font-size:33px;} .wrap{padding:34px 18px 48px;} }
+  @media(max-width:600px){ h1{font-size:31px;} .wrap{padding:32px 18px 46px;} }
 </style>
 </head>
 <body>
@@ -110,10 +124,19 @@
   <div class="logo"><img src="https://gregorystevensonfinancial.com/logo.png" alt="Gregory Stevenson Financial Services"></div>
   <div class="eyebrow">Gregory Stevenson &middot; Financial Services</div>
   <h1>Grow your wealth <em>safely.</em></h1>
-  <p class="tag">Retirement income, wealth preservation &amp; legacy planning — with no obligation.</p>
+  <p class="tag">Retirement income, wealth preservation &amp; legacy planning.</p>
+  <div class="reassure"><span><b>&#10003;</b> 100% free</span><span><b>&#10003;</b> No obligation</span><span><b>&#10003;</b> 15 minutes</span></div>
 
-  <a class="btn-primary" href="#book" data-track="book_call">Book a Call &rsaquo;</a>
+  <div class="booktitle" id="book">
+    <h2>Book your free review</h2>
+    <p>Pick a time that works — that's it.</p>
+  </div>
+  <div class="cal">
+    <div class="cal-skel" id="calskel"><div class="spin"></div><span>Loading your calendar&hellip;</span></div>
+    <div id="cal"></div>
+  </div>
 
+  <div class="divider"><span class="l"></span><small>Or explore</small><span class="l"></span></div>
   <div class="links">
     <a class="card" href="https://indexedannuitysecrets.com" target="_blank" rel="noopener" data-track="get_book">
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 5a2 2 0 012-2h9v18H6a2 2 0 01-2-2z"/><path d="M15 3h3a1 1 0 011 1v15a1 1 0 01-1 1h-3"/></svg></span>
@@ -127,14 +150,6 @@
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M9 4h6"/><circle cx="9.5" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="14" r="1.2" fill="currentColor" stroke="none"/></svg></span>
       <span><b>Ask Oscar — Annuity AI</b><small>Instant answers from our AI assistant</small></span><span class="arw">&rsaquo;</span>
     </a>
-  </div>
-
-  <section class="sec" id="book">
-    <h2>Book your free review</h2>
-    <p>A no-pressure 15-minute call. Pick a time.</p>
-  </section>
-  <div class="cal">
-    <div id="cal" class="calendly-inline-widget" data-track="book_call"></div>
   </div>
 
   <section class="sec"><h2>Prefer a callback?</h2><p>Leave your details and Gregory will reach out.</p></section>
@@ -164,14 +179,32 @@
       try{ if(window.fbq){ fbq('track','Schedule'); fbq('track','Lead'); } }catch(x){}
     }
   });
-</script>
-<script>
+
   (function(){
-    var base = window.PAGE_CALENDAR || 'https://calendly.com/gregorystevenson/phone-call-with-agent';
-    document.getElementById('cal').setAttribute('data-url', base + '?hide_event_type_details=1&hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1b1848&text_color=ffffff&primary_color=c6a24c');
+    var url = (window.PAGE_CALENDAR || 'https://calendly.com/gregorystevenson/phone-call-with-agent')
+      + '?hide_event_type_details=1&hide_landing_page_details=1&hide_gdpr_banner=1&background_color=1b1848&text_color=ffffff&primary_color=c6a24c';
+    var el = document.getElementById('cal');
+    var skel = document.getElementById('calskel');
+    var started = false;
+    function withCalendly(cb){
+      if(window.Calendly){ cb(); return; }
+      var s=document.createElement('script'); s.src='https://assets.calendly.com/assets/external/widget.js'; s.async=true;
+      s.onload=cb; document.head.appendChild(s);
+    }
+    function start(){
+      if(started) return; started = true;
+      withCalendly(function(){
+        Calendly.initInlineWidget({ url:url, parentElement:el });
+        setTimeout(function(){ if(skel) skel.style.display='none'; }, 900);
+      });
+    }
+    if('IntersectionObserver' in window){
+      var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ start(); io.disconnect(); } }); }, {rootMargin:'600px'});
+      io.observe(el);
+    } else { start(); }
+    window.addEventListener('load', function(){ setTimeout(start, 500); });
   })();
 </script>
-<script src="https://assets.calendly.com/assets/external/widget.js"></script>
 <script src="/lead-capture.js" defer></script>
 </body>
 </html>
