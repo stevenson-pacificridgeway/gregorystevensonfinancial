@@ -4,6 +4,28 @@
    on failure so no lead is ever lost. Add new forms freely; they wire automatically. */
 (function(){
   var ENDPOINT = 'https://ridgecrm-production.up.railway.app/api/website-lead';
+
+  (function(){
+    try{
+      var p = new URLSearchParams(location.search);
+      var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'];
+      var found = {}, any = false;
+      keys.forEach(function(k){ var v = p.get(k); if(v){ found[k] = v; any = true; } });
+      if(any) sessionStorage.setItem('lead_ad_source', JSON.stringify(found));
+    }catch(e){}
+  })();
+  function adSourceString(){
+    var o = {};
+    try{ var s = sessionStorage.getItem('lead_ad_source'); if(s) o = JSON.parse(s); }catch(e){}
+    try{ var p = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){ var v = p.get(k); if(v && !o[k]) o[k] = v; }); }catch(e){}
+    var parts = Object.keys(o).map(function(k){ return k + '=' + o[k]; });
+    return parts.length ? parts.join(' | ') : '';
+  }
+  function withUtms(msg){
+    var ad = adSourceString();
+    if(!ad) return msg || '';
+    return (msg ? msg + '  ' : '') + '[Ad source: ' + ad + ']';
+  }
   function sourceFor(form){
     return form.getAttribute("data-source") || window.__LEAD_SOURCE__ || (location.hostname + location.pathname);
   }
@@ -49,7 +71,7 @@
         email: val(form,['email']),
         phone: val(form,['phone','tel','mobile','phone_number']),
         source: sourceFor(form),
-        message: val(form,['message','comments','notes','concern','primary_concern','question'])
+        message: withUtms(val(form,['message','comments','notes','concern','primary_concern','question']))
       };
       var btn = form.querySelector('[type="submit"]') || form.querySelector('button');
       var orig = btn ? btn.textContent : '';
