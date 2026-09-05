@@ -44,10 +44,11 @@
     var box = document.createElement('div');
     box.className = 'lead-thankyou';
     box.setAttribute('role','status');
-    box.style.cssText = 'padding:20px 22px;border-radius:16px;background:rgba(198,162,76,.14);border:1px solid rgba(230,207,140,.5);color:#f4f1e8;text-align:center;font-family:inherit;';
-    box.innerHTML = '<div style="font-weight:700;font-size:18px;margin-bottom:4px;">Thank you!</div><div style="color:#cdc8e2;font-size:14px;">We have received your request and Gregory\'s office will be in touch shortly.</div>';
+    box.style.cssText = 'padding:22px;border-radius:16px;background:rgba(198,162,76,.14);border:1px solid rgba(230,207,140,.5);color:#f4f1e8;text-align:center;font-family:inherit;';
+    box.innerHTML = '<div style="font-weight:700;font-size:18px;margin-bottom:6px;">Thank you!</div><div style="color:#cdc8e2;font-size:14px;margin-bottom:14px;">We got your request. Want to talk sooner? Pick a time now.</div><a href="#book" style="display:inline-block;padding:12px 22px;border-radius:980px;font-weight:700;color:#241a06;text-decoration:none;background:linear-gradient(135deg,#e6cd82,#c6a24c);">Pick a time</a>';
     form.parentNode.insertBefore(box, form);
     form.style.display = 'none';
+    try{ var _t=document.getElementById('book'); if(_t) _t.scrollIntoView({behavior:'smooth'}); }catch(e){}
   }
   function fallback(form){
     var action = form.getAttribute('action');
@@ -62,7 +63,7 @@
   function wire(form){
     if(form.__leadWired) return; form.__leadWired = true;
     form.addEventListener('submit', function(e){
-      e.preventDefault();
+      e.preventDefault(); var _hp=form.querySelector('[name="company_website"]'); if(_hp&&_hp.value){ showThankYou(form); return; }
       var name = val(form,['name','fullname','full_name','first_name','fname']);
       var last = val(form,['last_name','lname']);
       if(last) name = (name + ' ' + last).trim();
