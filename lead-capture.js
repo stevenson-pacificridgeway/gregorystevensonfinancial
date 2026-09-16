@@ -1,9 +1,9 @@
-/* Site-wide lead capture -> RidgeCRM (Follow Up Boss)
+/* Site-wide lead capture -> Pacific Ridgeway Lead Hub (-> Follow Up Boss, alerts, auto-reply)
    Auto-wires any lead form on the page: on submit it POSTs the lead as JSON,
    shows a thank-you on success, and falls back to the form's existing behavior
    on failure so no lead is ever lost. Add new forms freely; they wire automatically. */
 (function(){
-  var ENDPOINT = 'https://ridgecrm-production.up.railway.app/api/website-lead';
+  var ENDPOINT = 'https://lead-hub-production-afbe.up.railway.app/intake';
 
   (function(){
     try{
@@ -67,13 +67,20 @@
       var name = val(form,['name','fullname','full_name','first_name','fname']);
       var last = val(form,['last_name','lname']);
       if(last) name = (name + ' ' + last).trim();
+      var consentEl = form.querySelector('[name="consent"]');
       var payload = {
         name: name,
         email: val(form,['email']),
         phone: val(form,['phone','tel','mobile','phone_number']),
         source: sourceFor(form),
-        message: withUtms(val(form,['message','comments','notes','concern','primary_concern','question']))
+        form_id: form.getAttribute('data-form') || form.id || (location.pathname.replace(/\W+/g,'-').replace(/^-|-$/g,'') || 'home'),
+        page_url: location.href,
+        referrer: document.referrer || '',
+        consent_status: consentEl ? (consentEl.checked ? 'granted' : 'denied') : undefined,
+        consent_text_version: consentEl ? 'gsf-2026-09' : undefined,
+        message: withUtms(val(form,['message','comments','notes','concern','primary_concern','question','help']))
       };
+      try{ var ad = {}; var sv = sessionStorage.getItem('lead_ad_source'); if(sv) ad = JSON.parse(sv); var qp = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){ var v = qp.get(k) || ad[k]; if(v) payload[k] = v; }); }catch(e){}
       var btn = form.querySelector('[type="submit"]') || form.querySelector('button');
       var orig = btn ? btn.textContent : '';
       if(btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
