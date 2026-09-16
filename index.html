@@ -156,6 +156,26 @@
   .pillar p{font-size:15.5px;color:var(--sub);}
 
   /* BOOK */
+  /* Lead capture */
+  .capture{background:var(--cream);padding:96px 0;}
+  .capture-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;}
+  .capture h2{font-size:40px;}
+  .capture .points{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px;}
+  .capture .points li{display:flex;gap:12px;align-items:flex-start;color:#3a3f47;font-size:16px;}
+  .capture .points li::before{content:"";flex:0 0 8px;height:8px;margin-top:10px;border-radius:50%;background:var(--gold);}
+  .lead-form{background:#fff;border:1px solid rgba(20,24,30,.08);border-radius:22px;padding:34px;box-shadow:0 24px 60px rgba(20,24,30,.08);display:grid;gap:14px;}
+  .lead-form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  .lead-form label{display:grid;gap:6px;font-size:13px;font-weight:600;color:#3a3f47;}
+  .lead-form input,.lead-form select,.lead-form textarea{width:100%;font:inherit;font-size:16px;padding:13px 14px;border-radius:12px;border:1px solid rgba(20,24,30,.16);background:#fbfaf7;color:var(--ink);}
+  .lead-form input:focus,.lead-form select:focus,.lead-form textarea:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold);}
+  .lead-form textarea{min-height:88px;resize:vertical;}
+  .lead-form .consent{display:flex;gap:10px;align-items:flex-start;font-size:12.5px;font-weight:400;color:#5b616b;line-height:1.5;}
+  .lead-form .consent input{width:18px;height:18px;margin-top:2px;flex:0 0 18px;padding:0;}
+  .lead-form button{margin-top:4px;}
+  .lead-form .fine{font-size:12.5px;color:#7a808a;text-align:center;margin:0;}
+  .lead-thankyou{background:#fff!important;border:1px solid rgba(194,161,77,.5)!important;color:var(--ink)!important;}
+  .lead-thankyou div{color:#3a3f47!important;}
+  @media(max-width:900px){.capture-grid{grid-template-columns:1fr;gap:36px;}.capture h2{font-size:32px;}.lead-form .row{grid-template-columns:1fr;}.lead-form{padding:24px;}}
   .book{background:var(--navy);color:#fff;overflow:hidden;position:relative;}
   .book .wrap{padding:112px 30px;}
   .book-grid{display:grid;grid-template-columns:330px 1fr;gap:66px;align-items:center;}
@@ -531,6 +551,44 @@
 
 
 <!-- CTA -->
+<!-- LEAD CAPTURE -->
+<section class="capture" id="callback">
+  <div class="wrap capture-grid reveal">
+    <div>
+      <div class="label">Not ready to book a call?</div>
+      <h2>Ask a question. Get a real answer.</h2>
+      <p>Tell Gregory what you're thinking about — protecting your savings, turning a 401(k) into income, or a question from the book — and he'll reach out personally. No pressure, no obligation.</p>
+      <ul class="points">
+        <li>A licensed professional calls or texts you back, usually the same business day.</li>
+        <li>Plain-English answers based on your situation, not a sales pitch.</li>
+        <li>Prefer to talk now? Call <a href="tel:+16193748100">(619) 374-8100</a>.</li>
+      </ul>
+    </div>
+    <form class="lead-form" id="callback-form" data-form="home-callback" data-source="Gregory Stevenson Financial">
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+      <div class="row">
+        <label>Full name<input name="name" type="text" autocomplete="name" placeholder="Jane Saver" required></label>
+        <label>Mobile phone<input name="phone" type="tel" autocomplete="tel" placeholder="(619) 555-0123" required></label>
+      </div>
+      <label>Email<input name="email" type="email" autocomplete="email" placeholder="jane@email.com" required></label>
+      <label>What would you like help with?
+        <select name="help">
+          <option value="">Choose one (optional)</option>
+          <option>Protecting my savings from market losses</option>
+          <option>Turning my 401(k) or IRA into guaranteed income</option>
+          <option>Life insurance or legacy planning</option>
+          <option>A question about the book</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label>Anything else we should know? <textarea name="message" placeholder="Optional — a sentence or two is plenty."></textarea></label>
+      <label class="consent"><input type="checkbox" name="consent" required><span>I agree to be contacted by Pacific Ridgeway Insurance Solutions by phone, text, or email about my request. Message and data rates may apply. Reply STOP to opt out at any time.</span></label>
+      <button class="btn btn-gold" type="submit">Request a Call Back</button>
+      <p class="fine">Your information is never sold or shared.</p>
+    </form>
+  </div>
+</section>
+
 <section class="cta">
   <div class="wrap" style="position:relative;z-index:5;">
     <h2>Let's build your retirement with confidence.</h2>
