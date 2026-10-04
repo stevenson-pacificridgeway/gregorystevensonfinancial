@@ -28,6 +28,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://calendly.com">
 <link rel="preconnect" href="https://assets.calendly.com">
+<link rel="preconnect" href="https://connect.facebook.net"><link rel="dns-prefetch" href="https://connect.facebook.net">
+<link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
 
@@ -145,6 +147,10 @@
       <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="8" width="16" height="12" rx="3"/><path d="M12 8V4M9 4h6"/><circle cx="9.5" cy="14" r="1.2" fill="currentColor" stroke="none"/><circle cx="14.5" cy="14" r="1.2" fill="currentColor" stroke="none"/></svg></span>
       <span><b>Ask Oscar — Annuity AI</b><small>Instant answers from our AI assistant</small></span><span class="arw">&rsaquo;</span>
     </a>
+    <a class="card" href="https://www.youtube.com/@IndexedAnnuitySecrets/videos" target="_blank" rel="noopener" data-track="youtube">
+      <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 00-1.77-1.77C19.34 5.1 12 5.1 12 5.1s-7.34 0-8.83.43A2.5 2.5 0 001.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 001.77 1.77c1.49.43 8.83.43 8.83.43s7.34 0 8.83-.43a2.5 2.5 0 001.77-1.77C23 15.2 23 12 23 12zM9.75 15.02V8.98L15.5 12z"/></svg></span>
+      <span><b>Everything Annuities</b><small>My YouTube channel</small></span><span class="arw">&rsaquo;</span>
+    </a>
   </div>
 
   <section class="sec" id="book">
@@ -187,6 +193,7 @@
   (function(){
     var base=(window.PAGE_CALENDAR||'https://calendly.com/gregorystevenson/phone-call-with-agent');
     var url=base+'?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1b1848&text_color=ffffff&primary_color=c6a24c';
+    try{ var ad={}; var sv=sessionStorage.getItem('lead_ad_source'); if(sv) ad=JSON.parse(sv); var qp=new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){ var v=qp.get(k)||ad[k]; if(v) url+='&'+k+'='+encodeURIComponent(v); }); }catch(e){}
     var d=document.getElementById('cal'); if(d){ d.setAttribute('data-url',url); }
     function load(){ if(document.querySelector('script[src*="assets.calendly.com/assets/external/widget.js"]')) return; var s=document.createElement('script'); s.src='https://assets.calendly.com/assets/external/widget.js'; s.async=true; document.head.appendChild(s); }
     load();
