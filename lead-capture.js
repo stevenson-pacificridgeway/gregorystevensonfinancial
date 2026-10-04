@@ -8,7 +8,7 @@
   (function(){
     try{
       var p = new URLSearchParams(location.search);
-      var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'];
+      var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','wbraid','gbraid','msclkid','ttclid','li_fat_id'];
       var found = {}, any = false;
       keys.forEach(function(k){ var v = p.get(k); if(v){ found[k] = v; any = true; } });
       if(any) sessionStorage.setItem('lead_ad_source', JSON.stringify(found));
@@ -17,7 +17,7 @@
   function adSourceString(){
     var o = {};
     try{ var s = sessionStorage.getItem('lead_ad_source'); if(s) o = JSON.parse(s); }catch(e){}
-    try{ var p = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){ var v = p.get(k); if(v && !o[k]) o[k] = v; }); }catch(e){}
+    try{ var p = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','wbraid','gbraid','msclkid','ttclid','li_fat_id'].forEach(function(k){ var v = p.get(k); if(v && !o[k]) o[k] = v; }); }catch(e){}
     var parts = Object.keys(o).map(function(k){ return k + '=' + o[k]; });
     return parts.length ? parts.join(' | ') : '';
   }
@@ -80,7 +80,7 @@
         consent_text_version: consentEl ? 'gsf-2026-09' : undefined,
         message: withUtms(val(form,['message','comments','notes','concern','primary_concern','question','help']))
       };
-      try{ var ad = {}; var sv = sessionStorage.getItem('lead_ad_source'); if(sv) ad = JSON.parse(sv); var qp = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid'].forEach(function(k){ var v = qp.get(k) || ad[k]; if(v) payload[k] = v; }); }catch(e){}
+      try{ var ad = {}; var sv = sessionStorage.getItem('lead_ad_source'); if(sv) ad = JSON.parse(sv); var qp = new URLSearchParams(location.search); ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','fbclid','gclid','wbraid','gbraid','msclkid','ttclid','li_fat_id'].forEach(function(k){ var v = qp.get(k) || ad[k]; if(v) payload[k] = v; }); }catch(e){}
       var btn = form.querySelector('[type="submit"]') || form.querySelector('button');
       var orig = btn ? btn.textContent : '';
       if(btn){ btn.disabled = true; btn.textContent = 'Sending...'; }
@@ -90,7 +90,7 @@
         body: JSON.stringify(payload)
       })
       .then(function(r){ if(!r.ok) throw new Error('status ' + r.status); return r; })
-      .then(function(){ showThankYou(form); })
+      .then(function(){ try{ if(window.fbq) fbq('track','Lead',{content_name:payload.source}); }catch(e){} try{ if(window.gtag) gtag('event','generate_lead',{method:payload.source}); }catch(e){} showThankYou(form); })
       .catch(function(){ if(btn){ btn.disabled = false; btn.textContent = orig; } fallback(form); });
     });
   }
