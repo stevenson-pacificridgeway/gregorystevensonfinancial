@@ -45,10 +45,9 @@
     box.className = 'lead-thankyou';
     box.setAttribute('role','status');
     box.style.cssText = 'padding:22px;border-radius:16px;background:rgba(198,162,76,.14);border:1px solid rgba(230,207,140,.5);color:#f4f1e8;text-align:center;font-family:inherit;';
-    box.innerHTML = '<div style="font-weight:700;font-size:18px;margin-bottom:6px;">Thank you!</div><div style="color:#cdc8e2;font-size:14px;margin-bottom:14px;">We got your request. Want to talk sooner? Pick a time now.</div><a href="#book" style="display:inline-block;padding:12px 22px;border-radius:980px;font-weight:700;color:#241a06;text-decoration:none;background:linear-gradient(135deg,#e6cd82,#c6a24c);">Pick a time</a>';
+    box.innerHTML = '<div style="font-weight:700;font-size:20px;margin-bottom:6px;">Enjoy! \uD83C\uDF89</div><div style="color:#cdc8e2;font-size:14px;">You are all set. Explore anything below - watch the free training, grab the book, ask Oscar, or book your free call whenever you like.</div>';
     form.parentNode.insertBefore(box, form);
     form.style.display = 'none';
-    try{ var _t=document.getElementById('book'); if(_t) _t.scrollIntoView({behavior:'smooth'}); }catch(e){}
   }
   function fallback(form){
     var action = form.getAttribute('action');
