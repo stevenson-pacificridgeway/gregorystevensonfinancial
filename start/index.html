@@ -122,9 +122,42 @@
   .disc{font-size:11px;line-height:1.55;color:#7d78a0;max-width:440px;margin:0 auto;}
 
   @media(max-width:600px){ h1{font-size:33px;} .wrap{padding:34px 18px 48px;} }
+
+  /* Landing lead gate */
+  .gate-open{overflow:hidden !important;}
+  #leadgate{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:18px;background:rgba(6,5,20,.82);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+  #leadgate .gcard{width:100%;max-width:420px;background:#1b1848;border:1px solid rgba(230,207,140,.3);border-radius:20px;padding:26px 24px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.6);}
+  #leadgate .glogo{width:72px;height:72px;border-radius:50%;object-fit:cover;margin:0 auto 12px;display:block;box-shadow:0 0 0 2px rgba(230,207,140,.7);background:#e9e9ec;}
+  #leadgate h3{font-family:'Playfair Display',serif;font-weight:600;font-size:23px;color:#fff;margin-bottom:6px;}
+  #leadgate p.gsub{color:#b6b1cf;font-size:14px;margin-bottom:16px;line-height:1.5;}
+  #leadgate form{display:block;}
+  #leadgate input[type=text],#leadgate input[type=tel],#leadgate input[type=email]{width:100%;margin-bottom:10px;background:#0f1c30;border:1px solid rgba(230,207,140,.28);border-radius:11px;padding:13px 15px;color:#f4f1e8;font-size:15px;outline:none;font-family:inherit;}
+  #leadgate input:focus{border-color:var(--gold-soft);}
+  #leadgate .gbtn{width:100%;border:none;cursor:pointer;border-radius:980px;padding:15px;font-weight:700;font-size:16px;color:#241a06;background:linear-gradient(135deg,#e6cd82,#c6a24c 55%,#a6832f);font-family:inherit;margin-top:4px;}
+  #leadgate .gconsent{display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:#9a95bd;text-align:left;margin:4px 0 10px;cursor:pointer;}
+  #leadgate .gconsent input{width:16px;height:16px;flex:0 0 16px;margin:2px 0 0;accent-color:var(--gold);}
+  #leadgate .gtrust{margin-top:12px;font-size:11px;color:#7d78a0;}
 </style>
 </head>
 <body>
+<!-- Landing lead gate (captured via lead-capture.js) -->
+<div id="leadgate" role="dialog" aria-modal="true" aria-label="Get instant access">
+  <div class="gcard">
+    <img class="glogo" src="/logo.png" alt="Gregory Stevenson">
+    <h3>Get your free retirement review</h3>
+    <p class="gsub">Enter your details to unlock Gregory's book, free training, calendar, and AI assistant.</p>
+    <form id="gateform" data-source="Gregory Stevenson Financial - Start Page (Gate)" data-form="start-gate">
+      <input type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+      <input type="text" name="name" placeholder="Full name" autocomplete="name" required>
+      <input type="tel" name="phone" placeholder="Mobile phone" inputmode="tel" autocomplete="tel" required>
+      <input type="email" name="email" placeholder="Email address" autocomplete="email" required>
+      <label class="gconsent"><input type="checkbox" name="consent" required><span>I agree to be contacted by Pacific Ridgeway by phone, text, or email about my request. Msg &amp; data rates may apply. Consent is not a condition of purchase.</span></label>
+      <button type="submit" class="gbtn">Unlock instant access &rsaquo;</button>
+    </form>
+    <div class="gtrust">&#128274; Your information is private and never sold.</div>
+  </div>
+</div>
+
 <div class="wrap">
 
   <div class="logo"><img src="https://gregorystevensonfinancial.com/logo.png" alt="Gregory Stevenson Financial Services"></div>
@@ -200,5 +233,19 @@
   })();
 </script>
 <script src="/lead-capture.js" defer></script>
+
+<script>
+(function(){
+  var KEY='gsf_gate_done';
+  var gate=document.getElementById('leadgate'); if(!gate) return;
+  var html=document.documentElement, body=document.body;
+  function closeGate(){ gate.style.display='none'; html.classList.remove('gate-open'); body.classList.remove('gate-open'); }
+  var already=false; try{ already=!!sessionStorage.getItem(KEY); }catch(e){}
+  if(already){ closeGate(); return; }
+  html.classList.add('gate-open'); body.classList.add('gate-open');
+  var obs=new MutationObserver(function(){ if(gate.querySelector('.lead-thankyou')){ try{sessionStorage.setItem(KEY,'1');}catch(e){} setTimeout(closeGate, 700); obs.disconnect(); } });
+  obs.observe(gate,{childList:true,subtree:true});
+})();
+</script>
 </body>
 </html>
