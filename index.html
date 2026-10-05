@@ -296,6 +296,7 @@
     .nav-links.open{display:flex;}
     .menu-toggle{display:block;}
   }
+.hero-photo{position:absolute;left:0;right:0;bottom:0;width:100%;height:430px;object-fit:cover;object-position:center 56%;z-index:4;-webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 46%);mask-image:linear-gradient(to bottom,transparent 0,#000 46%);pointer-events:none;}@media(max-width:880px){.hero-photo{height:250px;}}
 </style>
 <link rel="icon" type="image/png" href="/logo.png"><link rel="apple-touch-icon" href="/logo.png"><script>
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -356,7 +357,8 @@
     </div>
   </div>
   <!-- Layered mountain valley scene -->
-  <svg class="mtns mtns-hero" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+  <img class="hero-photo" src="https://d8j0ntlcm91z4.cloudfront.net/user_3KFG34s7yLYxj2v66k5qJOQw9Rz/hf_20261005_030344_255d9aff-53bf-45c8-bf44-205f7de3759a.png" alt="Blue mountain range at golden hour" onload="var s=document.getElementById('heroSvg');if(s)s.style.display='none';" onerror="this.style.display='none';">
+  <svg id="heroSvg" class="mtns mtns-hero" viewBox="0 0 1440 320" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
     <defs>
       <linearGradient id="gFar" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c6d2e0"/><stop offset="1" stop-color="#aebfd2"/></linearGradient>
       <linearGradient id="gMid" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#84a0bd"/><stop offset="1" stop-color="#5f7993"/></linearGradient>
