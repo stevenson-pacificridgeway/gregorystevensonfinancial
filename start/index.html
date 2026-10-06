@@ -2,13 +2,6 @@
 <html lang="en">
 <head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8N4L0ZKGY"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H8N4L0ZKGY');
-</script>
 <meta charset="UTF-8">
 <meta name="robots" content="noindex,follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,16 +26,6 @@
 <link rel="preconnect" href="https://www.googletagmanager.com"><link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css">
-
-<script>
-  window.__META_PIXEL_ID__ = "614281688337041";
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-  document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', window.__META_PIXEL_ID__); fbq('track', 'PageView');
-</script>
 
 <!-- ===== EDIT THESE TWO LINES TO SPIN UP A NEW PERSON'S PAGE ===== -->
 <script>
@@ -139,6 +122,18 @@
   #leadgate .gconsent input{width:16px;height:16px;flex:0 0 16px;margin:2px 0 0;accent-color:var(--gold);}
   #leadgate .gtrust{margin-top:12px;font-size:11px;color:#7d78a0;}
 </style>
+<!-- PR tracking: GA4 + Meta Pixel + lead events -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H8N4L0ZKGY"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-H8N4L0ZKGY');
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','614281688337041');fbq('track','PageView');
+window.prTrack=function(ev,p){try{gtag('event',ev,p||{});}catch(e){}};
+window.prTrackLead=function(src){var s=src||location.hostname;window.prTrack('generate_lead',{lead_source:s,site:location.hostname});try{fbq('track','Lead',{content_name:s});}catch(e){}};
+document.addEventListener('submit',function(e){var f=e.target;if(f&&f.tagName==='FORM')window.prTrackLead(f.id||f.getAttribute('name')||f.getAttribute('data-source')||location.pathname);},true);
+document.addEventListener('click',function(e){var a=e.target&&e.target.closest?e.target.closest('a[href]'):null;if(!a)return;var h=a.getAttribute('href')||'';if(h.indexOf('tel:')===0){window.prTrack('click_to_call',{site:location.hostname});try{fbq('track','Contact');}catch(x){}}else if(h.indexOf('calendly.com')>-1){window.prTrack('click_book_call',{site:location.hostname});}else if(/\.pdf(\?|$)/i.test(h)||/\/download|escape-kit|kit-download/.test(h)){window.prTrack('file_download',{site:location.hostname,link_url:h});}},true);
+window.addEventListener('message',function(e){if(e.data&&e.data.event==='calendly.event_scheduled'){window.prTrack('book_appointment',{site:location.hostname});try{fbq('track','Schedule');}catch(x){}}});
+</script>
 </head>
 <body>
 <!-- Landing lead gate (captured via lead-capture.js) -->
