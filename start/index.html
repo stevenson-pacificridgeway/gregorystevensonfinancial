@@ -121,6 +121,8 @@
   #leadgate .gconsent{display:flex;gap:8px;align-items:flex-start;font-size:11px;line-height:1.45;color:#9a95bd;text-align:left;margin:4px 0 10px;cursor:pointer;}
   #leadgate .gconsent input{width:16px;height:16px;flex:0 0 16px;margin:2px 0 0;accent-color:var(--gold);}
   #leadgate .gtrust{margin-top:12px;font-size:11px;color:#7d78a0;}
+  #gateClose{position:fixed;right:14px;bottom:12px;z-index:10001;background:none;border:none;color:#000;opacity:.12;font-size:26px;line-height:1;cursor:pointer;padding:6px 10px;font-family:inherit;}
+  #gateClose:hover{opacity:.55;}
 </style>
 <!-- PR tracking: GA4 + Meta Pixel + lead events -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H8N4L0ZKGY"></script>
@@ -138,6 +140,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.event==='calendl
 <body>
 <!-- Landing lead gate (captured via lead-capture.js) -->
 <div id="leadgate" role="dialog" aria-modal="true" aria-label="Get instant access">
+  <button id="gateClose" type="button" aria-label="Close" title="Close">&times;</button>
   <div class="gcard">
     <img class="glogo" src="/logo.png" alt="Gregory Stevenson">
     <h3>Get your free retirement review</h3>
@@ -239,6 +242,7 @@ window.addEventListener('message',function(e){if(e.data&&e.data.event==='calendl
   var already=false; try{ already=!!sessionStorage.getItem(KEY); }catch(e){}
   if(already){ closeGate(); return; }
   html.classList.add('gate-open'); body.classList.add('gate-open');
+  var _xb=document.getElementById('gateClose'); if(_xb) _xb.addEventListener('click', function(){ try{sessionStorage.setItem(KEY,'1');}catch(e){} closeGate(); });
   var obs=new MutationObserver(function(){ if(gate.querySelector('.lead-thankyou')){ try{sessionStorage.setItem(KEY,'1');}catch(e){} setTimeout(closeGate, 700); obs.disconnect(); } });
   obs.observe(gate,{childList:true,subtree:true});
 })();
